@@ -1,0 +1,1608 @@
+# depslib dependency file v1.0
+1476734986 source:/home/wbr/SteamTanks/main.cpp
+	<irrlicht.h>
+	<btBulletDynamicsCommon.h>
+	"iostream"
+	<string>
+	<vector>
+	<LinearMath/btIDebugDraw.h>
+	<BulletCollision/Gimpact/btGImpactShape.h>
+	<wchar.h>
+	"enums.h"
+	"tank.h"
+	"motionstate.h"
+
+1352128454 /home/wbr/Documents/irrlicht-1.8.3/include/irrlicht.h
+	"IrrCompileConfig.h"
+	"aabbox3d.h"
+	"CDynamicMeshBuffer.h"
+	"CIndexBuffer.h"
+	"CMeshBuffer.h"
+	"coreutil.h"
+	"CVertexBuffer.h"
+	"dimension2d.h"
+	"ECullingTypes.h"
+	"EDebugSceneTypes.h"
+	"EDriverFeatures.h"
+	"EDriverTypes.h"
+	"EGUIAlignment.h"
+	"EGUIElementTypes.h"
+	"EHardwareBufferFlags.h"
+	"EMaterialFlags.h"
+	"EMaterialTypes.h"
+	"EMeshWriterEnums.h"
+	"EMessageBoxFlags.h"
+	"ESceneNodeAnimatorTypes.h"
+	"ESceneNodeTypes.h"
+	"ETerrainElements.h"
+	"fast_atof.h"
+	"heapsort.h"
+	"IAnimatedMesh.h"
+	"IAnimatedMeshMD2.h"
+	"IAnimatedMeshMD3.h"
+	"IAnimatedMeshSceneNode.h"
+	"IAttributeExchangingObject.h"
+	"IAttributes.h"
+	"IBillboardSceneNode.h"
+	"IBillboardTextSceneNode.h"
+	"IBoneSceneNode.h"
+	"ICameraSceneNode.h"
+	"ICursorControl.h"
+	"IDummyTransformationSceneNode.h"
+	"IDynamicMeshBuffer.h"
+	"IEventReceiver.h"
+	"IFileList.h"
+	"IFileSystem.h"
+	"IGeometryCreator.h"
+	"IGPUProgrammingServices.h"
+	"IGUIButton.h"
+	"IGUICheckBox.h"
+	"IGUIColorSelectDialog.h"
+	"IGUIComboBox.h"
+	"IGUIContextMenu.h"
+	"IGUIEditBox.h"
+	"IGUIElement.h"
+	"IGUIElementFactory.h"
+	"IGUIEnvironment.h"
+	"IGUIFileOpenDialog.h"
+	"IGUIFont.h"
+	"IGUIFontBitmap.h"
+	"IGUIImage.h"
+	"IGUIInOutFader.h"
+	"IGUIListBox.h"
+	"IGUIMeshViewer.h"
+	"IGUIScrollBar.h"
+	"IGUISkin.h"
+	"IGUISpinBox.h"
+	"IGUISpriteBank.h"
+	"IGUIStaticText.h"
+	"IGUITabControl.h"
+	"IGUITable.h"
+	"IGUIToolbar.h"
+	"IGUIWindow.h"
+	"IGUITreeView.h"
+	"IImage.h"
+	"IImageLoader.h"
+	"IImageWriter.h"
+	"IIndexBuffer.h"
+	"ILightSceneNode.h"
+	"ILogger.h"
+	"IMaterialRenderer.h"
+	"IMaterialRendererServices.h"
+	"IMesh.h"
+	"IMeshBuffer.h"
+	"IMeshCache.h"
+	"IMeshLoader.h"
+	"IMeshManipulator.h"
+	"IMeshSceneNode.h"
+	"IMeshWriter.h"
+	"IColladaMeshWriter.h"
+	"IMetaTriangleSelector.h"
+	"IOSOperator.h"
+	"IParticleSystemSceneNode.h"
+	"IQ3LevelMesh.h"
+	"IQ3Shader.h"
+	"IReadFile.h"
+	"IReferenceCounted.h"
+	"irrArray.h"
+	"IRandomizer.h"
+	"IrrlichtDevice.h"
+	"irrList.h"
+	"irrMap.h"
+	"irrMath.h"
+	"irrString.h"
+	"irrTypes.h"
+	"path.h"
+	"irrXML.h"
+	"ISceneCollisionManager.h"
+	"ISceneLoader.h"
+	"ISceneManager.h"
+	"ISceneNode.h"
+	"ISceneNodeAnimator.h"
+	"ISceneNodeAnimatorCameraFPS.h"
+	"ISceneNodeAnimatorCameraMaya.h"
+	"ISceneNodeAnimatorCollisionResponse.h"
+	"ISceneNodeAnimatorFactory.h"
+	"ISceneNodeFactory.h"
+	"ISceneUserDataSerializer.h"
+	"IShaderConstantSetCallBack.h"
+	"IShadowVolumeSceneNode.h"
+	"ISkinnedMesh.h"
+	"ITerrainSceneNode.h"
+	"ITextSceneNode.h"
+	"ITexture.h"
+	"ITimer.h"
+	"ITriangleSelector.h"
+	"IVertexBuffer.h"
+	"IVideoDriver.h"
+	"IVideoModeList.h"
+	"IVolumeLightSceneNode.h"
+	"IWriteFile.h"
+	"IXMLReader.h"
+	"IXMLWriter.h"
+	"ILightManager.h"
+	"Keycodes.h"
+	"line2d.h"
+	"line3d.h"
+	"matrix4.h"
+	"plane3d.h"
+	"position2d.h"
+	"quaternion.h"
+	"rect.h"
+	"S3DVertex.h"
+	"SAnimatedMesh.h"
+	"SceneParameters.h"
+	"SColor.h"
+	"SExposedVideoData.h"
+	"SIrrCreationParameters.h"
+	"SKeyMap.h"
+	"SLight.h"
+	"SMaterial.h"
+	"SMesh.h"
+	"SMeshBuffer.h"
+	"SMeshBufferLightMap.h"
+	"SMeshBufferTangents.h"
+	"SParticle.h"
+	"SSharedMeshBuffer.h"
+	"SSkinMeshBuffer.h"
+	"SVertexIndex.h"
+	"SViewFrustum.h"
+	"triangle3d.h"
+	"vector2d.h"
+	"vector3d.h"
+	"SIrrCreationParameters.h"
+
+1442074536 /home/wbr/Documents/irrlicht-1.8.3/include/IrrCompileConfig.h
+	<stdio.h>
+	<xtl.h>
+	<tchar.h>
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/aabbox3d.h
+	"irrMath.h"
+	"plane3d.h"
+	"line3d.h"
+
+1377715330 /home/wbr/Documents/irrlicht-1.8.3/include/irrMath.h
+	"IrrCompileConfig.h"
+	"irrTypes.h"
+	<math.h>
+	<float.h>
+	<stdlib.h>
+	<limits.h>
+
+1353345640 /home/wbr/Documents/irrlicht-1.8.3/include/irrTypes.h
+	"IrrCompileConfig.h"
+	<wchar.h>
+	<crtdbg.h>
+	"assert.h"
+	<stdlib.h>
+	<crtdbg.h>
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/plane3d.h
+	"irrMath.h"
+	"vector3d.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/vector3d.h
+	"irrMath.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/line3d.h
+	"irrTypes.h"
+	"vector3d.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/CDynamicMeshBuffer.h
+	"IDynamicMeshBuffer.h"
+	"CVertexBuffer.h"
+	"CIndexBuffer.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IDynamicMeshBuffer.h
+	"IMeshBuffer.h"
+	"IVertexBuffer.h"
+	"IIndexBuffer.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IMeshBuffer.h
+	"IReferenceCounted.h"
+	"SMaterial.h"
+	"aabbox3d.h"
+	"S3DVertex.h"
+	"SVertexIndex.h"
+	"EHardwareBufferFlags.h"
+	"EPrimitiveTypes.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IReferenceCounted.h
+	"irrTypes.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/SMaterial.h
+	"SColor.h"
+	"matrix4.h"
+	"irrArray.h"
+	"irrMath.h"
+	"EMaterialTypes.h"
+	"EMaterialFlags.h"
+	"SMaterialLayer.h"
+
+1352128454 /home/wbr/Documents/irrlicht-1.8.3/include/SColor.h
+	"irrTypes.h"
+	"irrMath.h"
+
+1352128454 /home/wbr/Documents/irrlicht-1.8.3/include/matrix4.h
+	"irrMath.h"
+	"vector3d.h"
+	"vector2d.h"
+	"plane3d.h"
+	"aabbox3d.h"
+	"rect.h"
+	"irrString.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/vector2d.h
+	"irrMath.h"
+	"dimension2d.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/dimension2d.h
+	"irrTypes.h"
+	"irrMath.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/rect.h
+	"irrTypes.h"
+	"dimension2d.h"
+	"position2d.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/position2d.h
+	"vector2d.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/irrString.h
+	"irrTypes.h"
+	"irrAllocator.h"
+	"irrMath.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/irrAllocator.h
+	"irrTypes.h"
+	<new>
+	<memory.h>
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/irrArray.h
+	"irrTypes.h"
+	"heapsort.h"
+	"irrAllocator.h"
+	"irrMath.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/heapsort.h
+	"irrTypes.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/EMaterialTypes.h
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/EMaterialFlags.h
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/SMaterialLayer.h
+	"matrix4.h"
+	"irrAllocator.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/S3DVertex.h
+	"vector3d.h"
+	"vector2d.h"
+	"SColor.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/SVertexIndex.h
+	"irrTypes.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/EHardwareBufferFlags.h
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/EPrimitiveTypes.h
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IVertexBuffer.h
+	"IReferenceCounted.h"
+	"irrArray.h"
+	"S3DVertex.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IIndexBuffer.h
+	"IReferenceCounted.h"
+	"irrArray.h"
+	"SVertexIndex.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/CVertexBuffer.h
+	"IVertexBuffer.h"
+
+1352128454 /home/wbr/Documents/irrlicht-1.8.3/include/CIndexBuffer.h
+	"IIndexBuffer.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/CMeshBuffer.h
+	"irrArray.h"
+	"IMeshBuffer.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/coreutil.h
+	"irrString.h"
+	"path.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/path.h
+	"irrString.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/ECullingTypes.h
+	"irrTypes.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/EDebugSceneTypes.h
+
+1352128454 /home/wbr/Documents/irrlicht-1.8.3/include/EDriverFeatures.h
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/EDriverTypes.h
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/EGUIAlignment.h
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/EGUIElementTypes.h
+	"irrTypes.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/EMeshWriterEnums.h
+	"irrTypes.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/EMessageBoxFlags.h
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/ESceneNodeAnimatorTypes.h
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/ESceneNodeTypes.h
+	"irrTypes.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/ETerrainElements.h
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/fast_atof.h
+	"irrMath.h"
+	"irrString.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IAnimatedMesh.h
+	"aabbox3d.h"
+	"IMesh.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IMesh.h
+	"IReferenceCounted.h"
+	"SMaterial.h"
+	"EHardwareBufferFlags.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IAnimatedMeshMD2.h
+	"IAnimatedMesh.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IAnimatedMeshMD3.h
+	"IAnimatedMesh.h"
+	"IQ3Shader.h"
+	"quaternion.h"
+	"irrpack.h"
+	"irrunpack.h"
+
+1354569706 /home/wbr/Documents/irrlicht-1.8.3/include/IQ3Shader.h
+	"irrArray.h"
+	"fast_atof.h"
+	"IFileSystem.h"
+	"IVideoDriver.h"
+	"coreutil.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IFileSystem.h
+	"IReferenceCounted.h"
+	"IXMLReader.h"
+	"IFileArchive.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IXMLReader.h
+	"IReferenceCounted.h"
+	"irrXML.h"
+
+1359467970 /home/wbr/Documents/irrlicht-1.8.3/include/irrXML.h
+	<stdio.h>
+	"IrrCompileConfig.h"
+	<irrXML.h>
+	<string>
+	<irrXML.h>
+	<irrXML.h>
+	<irrXML.h>
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IFileArchive.h
+	"IReadFile.h"
+	"IFileList.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IReadFile.h
+	"IReferenceCounted.h"
+	"coreutil.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IFileList.h
+	"IReferenceCounted.h"
+	"path.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IVideoDriver.h
+	"rect.h"
+	"SColor.h"
+	"ITexture.h"
+	"irrArray.h"
+	"matrix4.h"
+	"plane3d.h"
+	"dimension2d.h"
+	"position2d.h"
+	"SMaterial.h"
+	"IMeshBuffer.h"
+	"triangle3d.h"
+	"EDriverTypes.h"
+	"EDriverFeatures.h"
+	"SExposedVideoData.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/ITexture.h
+	"IReferenceCounted.h"
+	"IImage.h"
+	"dimension2d.h"
+	"EDriverTypes.h"
+	"path.h"
+	"matrix4.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IImage.h
+	"IReferenceCounted.h"
+	"position2d.h"
+	"rect.h"
+	"SColor.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/triangle3d.h
+	"vector3d.h"
+	"line3d.h"
+	"plane3d.h"
+	"aabbox3d.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/SExposedVideoData.h
+
+1381241772 /home/wbr/Documents/irrlicht-1.8.3/include/quaternion.h
+	"irrTypes.h"
+	"irrMath.h"
+	"matrix4.h"
+	"vector3d.h"
+
+1440582484 /home/wbr/Documents/irrlicht-1.8.3/include/irrpack.h
+
+1441617224 /home/wbr/Documents/irrlicht-1.8.3/include/irrunpack.h
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IAnimatedMeshSceneNode.h
+	"ISceneNode.h"
+	"IBoneSceneNode.h"
+	"IAnimatedMeshMD2.h"
+	"IAnimatedMeshMD3.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/ISceneNode.h
+	"IAttributeExchangingObject.h"
+	"ESceneNodeTypes.h"
+	"ECullingTypes.h"
+	"EDebugSceneTypes.h"
+	"ISceneNodeAnimator.h"
+	"ITriangleSelector.h"
+	"SMaterial.h"
+	"irrString.h"
+	"aabbox3d.h"
+	"matrix4.h"
+	"irrList.h"
+	"IAttributes.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IAttributeExchangingObject.h
+	"IReferenceCounted.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/ISceneNodeAnimator.h
+	"IReferenceCounted.h"
+	"vector3d.h"
+	"ESceneNodeAnimatorTypes.h"
+	"IAttributeExchangingObject.h"
+	"IEventReceiver.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IEventReceiver.h
+	"ILogger.h"
+	"Keycodes.h"
+	"irrString.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/ILogger.h
+	"IReferenceCounted.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/Keycodes.h
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/ITriangleSelector.h
+	"IReferenceCounted.h"
+	"triangle3d.h"
+	"aabbox3d.h"
+	"matrix4.h"
+	"line3d.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/irrList.h
+	"irrTypes.h"
+	"irrAllocator.h"
+	"irrMath.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IAttributes.h
+	"IReferenceCounted.h"
+	"SColor.h"
+	"vector3d.h"
+	"vector2d.h"
+	"line2d.h"
+	"line3d.h"
+	"triangle3d.h"
+	"position2d.h"
+	"rect.h"
+	"dimension2d.h"
+	"matrix4.h"
+	"quaternion.h"
+	"plane3d.h"
+	"triangle3d.h"
+	"line2d.h"
+	"line3d.h"
+	"irrString.h"
+	"irrArray.h"
+	"IXMLReader.h"
+	"EAttributes.h"
+	"path.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/line2d.h
+	"irrTypes.h"
+	"vector2d.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/EAttributes.h
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IBoneSceneNode.h
+	"ISceneNode.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IBillboardSceneNode.h
+	"ISceneNode.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IBillboardTextSceneNode.h
+	"IBillboardSceneNode.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/ICameraSceneNode.h
+	"ISceneNode.h"
+	"IEventReceiver.h"
+
+1359462306 /home/wbr/Documents/irrlicht-1.8.3/include/ICursorControl.h
+	"IReferenceCounted.h"
+	"position2d.h"
+	"rect.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IDummyTransformationSceneNode.h
+	"ISceneNode.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IGeometryCreator.h
+	"IReferenceCounted.h"
+	"IMesh.h"
+	"IImage.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IGPUProgrammingServices.h
+	"EShaderTypes.h"
+	"EMaterialTypes.h"
+	"EPrimitiveTypes.h"
+	"path.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/EShaderTypes.h
+	"irrTypes.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IGUIButton.h
+	"IGUIElement.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IGUIElement.h
+	"IAttributeExchangingObject.h"
+	"irrList.h"
+	"rect.h"
+	"irrString.h"
+	"IEventReceiver.h"
+	"EGUIElementTypes.h"
+	"EGUIAlignment.h"
+	"IAttributes.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IGUICheckBox.h
+	"IGUIElement.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IGUIColorSelectDialog.h
+	"IGUIElement.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IGUIComboBox.h
+	"IGUIElement.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IGUIContextMenu.h
+	"IGUIElement.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IGUIEditBox.h
+	"IGUIElement.h"
+	"SColor.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IGUIElementFactory.h
+	"IReferenceCounted.h"
+	"EGUIElementTypes.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IGUIEnvironment.h
+	"IReferenceCounted.h"
+	"IGUISkin.h"
+	"rect.h"
+	"EMessageBoxFlags.h"
+	"IEventReceiver.h"
+	"IXMLReader.h"
+	"path.h"
+
+1410978190 /home/wbr/Documents/irrlicht-1.8.3/include/IGUISkin.h
+	"IAttributeExchangingObject.h"
+	"EGUIAlignment.h"
+	"SColor.h"
+	"rect.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IGUIFileOpenDialog.h
+	"IGUIElement.h"
+	"path.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IGUIFont.h
+	"IReferenceCounted.h"
+	"SColor.h"
+	"rect.h"
+	"irrString.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IGUIFontBitmap.h
+	"IGUIFont.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IGUIImage.h
+	"IGUIElement.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IGUIInOutFader.h
+	"IGUIElement.h"
+	"SColor.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IGUIListBox.h
+	"IGUIElement.h"
+	"SColor.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IGUIMeshViewer.h
+	"IGUIElement.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IGUIScrollBar.h
+	"IGUIElement.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IGUISpinBox.h
+	"IGUIElement.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IGUISpriteBank.h
+	"IReferenceCounted.h"
+	"irrArray.h"
+	"SColor.h"
+	"rect.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IGUIStaticText.h
+	"IGUIElement.h"
+	"SColor.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IGUITabControl.h
+	"IGUIElement.h"
+	"SColor.h"
+	"IGUISkin.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IGUITable.h
+	"IGUIElement.h"
+	"irrTypes.h"
+	"SColor.h"
+	"IGUISkin.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IGUIToolbar.h
+	"IGUIElement.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IGUIWindow.h
+	"IGUIElement.h"
+	"EMessageBoxFlags.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IGUITreeView.h
+	"IGUIElement.h"
+	"IGUIImageList.h"
+	"irrTypes.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IGUIImageList.h
+	"IGUIElement.h"
+	"rect.h"
+	"irrTypes.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IImageLoader.h
+	"IReferenceCounted.h"
+	"IImage.h"
+	"path.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IImageWriter.h
+	"IReferenceCounted.h"
+	"irrString.h"
+	"coreutil.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/ILightSceneNode.h
+	"ISceneNode.h"
+	"SLight.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/SLight.h
+	"SColor.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IMaterialRenderer.h
+	"IReferenceCounted.h"
+	"SMaterial.h"
+	"S3DVertex.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IMaterialRendererServices.h
+	"SMaterial.h"
+	"S3DVertex.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IMeshCache.h
+	"IReferenceCounted.h"
+	"path.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IMeshLoader.h
+	"IReferenceCounted.h"
+	"path.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IMeshManipulator.h
+	"IReferenceCounted.h"
+	"vector3d.h"
+	"aabbox3d.h"
+	"matrix4.h"
+	"IAnimatedMesh.h"
+	"IMeshBuffer.h"
+	"SVertexManipulator.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/SVertexManipulator.h
+	"S3DVertex.h"
+	"SColor.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IMeshSceneNode.h
+	"ISceneNode.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IMeshWriter.h
+	"IReferenceCounted.h"
+	"EMeshWriterEnums.h"
+
+1354809968 /home/wbr/Documents/irrlicht-1.8.3/include/IColladaMeshWriter.h
+	"IMeshWriter.h"
+	"ISceneNode.h"
+	"IAnimatedMesh.h"
+	"SMaterial.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IMetaTriangleSelector.h
+	"ITriangleSelector.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IOSOperator.h
+	"IReferenceCounted.h"
+	"irrString.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IParticleSystemSceneNode.h
+	"ISceneNode.h"
+	"IParticleAnimatedMeshSceneNodeEmitter.h"
+	"IParticleBoxEmitter.h"
+	"IParticleCylinderEmitter.h"
+	"IParticleMeshEmitter.h"
+	"IParticleRingEmitter.h"
+	"IParticleSphereEmitter.h"
+	"IParticleAttractionAffector.h"
+	"IParticleFadeOutAffector.h"
+	"IParticleGravityAffector.h"
+	"IParticleRotationAffector.h"
+	"dimension2d.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IParticleAnimatedMeshSceneNodeEmitter.h
+	"IParticleEmitter.h"
+	"IAnimatedMeshSceneNode.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IParticleEmitter.h
+	"IAttributeExchangingObject.h"
+	"SParticle.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/SParticle.h
+	"vector3d.h"
+	"dimension2d.h"
+	"SColor.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IParticleBoxEmitter.h
+	"IParticleEmitter.h"
+	"aabbox3d.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IParticleCylinderEmitter.h
+	"IParticleEmitter.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IParticleMeshEmitter.h
+	"IParticleEmitter.h"
+	"IMesh.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IParticleRingEmitter.h
+	"IParticleEmitter.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IParticleSphereEmitter.h
+	"IParticleEmitter.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IParticleAttractionAffector.h
+	"IParticleAffector.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IParticleAffector.h
+	"IAttributeExchangingObject.h"
+	"SParticle.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IParticleFadeOutAffector.h
+	"IParticleAffector.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IParticleGravityAffector.h
+	"IParticleAffector.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IParticleRotationAffector.h
+	"IParticleAffector.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IQ3LevelMesh.h
+	"IAnimatedMesh.h"
+	"IQ3Shader.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IRandomizer.h
+	"IReferenceCounted.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IrrlichtDevice.h
+	"IReferenceCounted.h"
+	"dimension2d.h"
+	"IVideoDriver.h"
+	"EDriverTypes.h"
+	"EDeviceTypes.h"
+	"IEventReceiver.h"
+	"ICursorControl.h"
+	"IVideoModeList.h"
+	"ITimer.h"
+	"IOSOperator.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/EDeviceTypes.h
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IVideoModeList.h
+	"IReferenceCounted.h"
+	"dimension2d.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/ITimer.h
+	"IReferenceCounted.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/irrMap.h
+	"irrTypes.h"
+	"irrMath.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/ISceneCollisionManager.h
+	"IReferenceCounted.h"
+	"vector3d.h"
+	"triangle3d.h"
+	"position2d.h"
+	"line3d.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/ISceneLoader.h
+	"IReferenceCounted.h"
+	"path.h"
+
+1371463760 /home/wbr/Documents/irrlicht-1.8.3/include/ISceneManager.h
+	"IReferenceCounted.h"
+	"irrArray.h"
+	"irrString.h"
+	"path.h"
+	"vector3d.h"
+	"dimension2d.h"
+	"SColor.h"
+	"ETerrainElements.h"
+	"ESceneNodeTypes.h"
+	"ESceneNodeAnimatorTypes.h"
+	"EMeshWriterEnums.h"
+	"SceneParameters.h"
+	"IGeometryCreator.h"
+	"ISkinnedMesh.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/SceneParameters.h
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/ISkinnedMesh.h
+	"irrArray.h"
+	"IBoneSceneNode.h"
+	"IAnimatedMesh.h"
+	"SSkinMeshBuffer.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/SSkinMeshBuffer.h
+	"IMeshBuffer.h"
+	"S3DVertex.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/ISceneNodeAnimatorCameraFPS.h
+	"ISceneNodeAnimator.h"
+	"IEventReceiver.h"
+	"irrArray.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/ISceneNodeAnimatorCameraMaya.h
+	"ISceneNodeAnimator.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/ISceneNodeAnimatorCollisionResponse.h
+	"ISceneNode.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/ISceneNodeAnimatorFactory.h
+	"IReferenceCounted.h"
+	"ESceneNodeAnimatorTypes.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/ISceneNodeFactory.h
+	"IReferenceCounted.h"
+	"ESceneNodeTypes.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/ISceneUserDataSerializer.h
+	"IReferenceCounted.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IShaderConstantSetCallBack.h
+	"IReferenceCounted.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IShadowVolumeSceneNode.h
+	"ISceneNode.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/ITerrainSceneNode.h
+	"ETerrainElements.h"
+	"ISceneNode.h"
+	"IDynamicMeshBuffer.h"
+	"irrArray.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/ITextSceneNode.h
+	"ISceneNode.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/IVolumeLightSceneNode.h
+	"ISceneNode.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IWriteFile.h
+	"IReferenceCounted.h"
+	"path.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/IXMLWriter.h
+	"IReferenceCounted.h"
+	"irrArray.h"
+	"irrString.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/ILightManager.h
+	"IReferenceCounted.h"
+	"irrArray.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/SAnimatedMesh.h
+	"IAnimatedMesh.h"
+	"IMesh.h"
+	"aabbox3d.h"
+	"irrArray.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/SIrrCreationParameters.h
+	"EDriverTypes.h"
+	"EDeviceTypes.h"
+	"dimension2d.h"
+	"ILogger.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/SKeyMap.h
+	"Keycodes.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/SMesh.h
+	"IMesh.h"
+	"IMeshBuffer.h"
+	"aabbox3d.h"
+	"irrArray.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/SMeshBuffer.h
+	"CMeshBuffer.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/SMeshBufferLightMap.h
+	"CMeshBuffer.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/SMeshBufferTangents.h
+	"CMeshBuffer.h"
+
+1351966114 /home/wbr/Documents/irrlicht-1.8.3/include/SSharedMeshBuffer.h
+	"irrArray.h"
+	"IMeshBuffer.h"
+
+1351966112 /home/wbr/Documents/irrlicht-1.8.3/include/SViewFrustum.h
+	"plane3d.h"
+	"vector3d.h"
+	"line3d.h"
+	"aabbox3d.h"
+	"matrix4.h"
+	"IVideoDriver.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/btBulletDynamicsCommon.h
+	"btBulletCollisionCommon.h"
+	"BulletDynamics/Dynamics/btDiscreteDynamicsWorld.h"
+	"BulletDynamics/Dynamics/btSimpleDynamicsWorld.h"
+	"BulletDynamics/Dynamics/btRigidBody.h"
+	"BulletDynamics/ConstraintSolver/btPoint2PointConstraint.h"
+	"BulletDynamics/ConstraintSolver/btHingeConstraint.h"
+	"BulletDynamics/ConstraintSolver/btConeTwistConstraint.h"
+	"BulletDynamics/ConstraintSolver/btGeneric6DofConstraint.h"
+	"BulletDynamics/ConstraintSolver/btSliderConstraint.h"
+	"BulletDynamics/ConstraintSolver/btGeneric6DofSpringConstraint.h"
+	"BulletDynamics/ConstraintSolver/btUniversalConstraint.h"
+	"BulletDynamics/ConstraintSolver/btHinge2Constraint.h"
+	"BulletDynamics/ConstraintSolver/btGearConstraint.h"
+	"BulletDynamics/ConstraintSolver/btFixedConstraint.h"
+	"BulletDynamics/ConstraintSolver/btSequentialImpulseConstraintSolver.h"
+	"BulletDynamics/Vehicle/btRaycastVehicle.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/btBulletCollisionCommon.h
+	"BulletCollision/CollisionDispatch/btCollisionWorld.h"
+	"BulletCollision/CollisionDispatch/btCollisionObject.h"
+	"BulletCollision/CollisionShapes/btBoxShape.h"
+	"BulletCollision/CollisionShapes/btSphereShape.h"
+	"BulletCollision/CollisionShapes/btCapsuleShape.h"
+	"BulletCollision/CollisionShapes/btCylinderShape.h"
+	"BulletCollision/CollisionShapes/btConeShape.h"
+	"BulletCollision/CollisionShapes/btStaticPlaneShape.h"
+	"BulletCollision/CollisionShapes/btConvexHullShape.h"
+	"BulletCollision/CollisionShapes/btTriangleMesh.h"
+	"BulletCollision/CollisionShapes/btConvexTriangleMeshShape.h"
+	"BulletCollision/CollisionShapes/btBvhTriangleMeshShape.h"
+	"BulletCollision/CollisionShapes/btScaledBvhTriangleMeshShape.h"
+	"BulletCollision/CollisionShapes/btTriangleMeshShape.h"
+	"BulletCollision/CollisionShapes/btTriangleIndexVertexArray.h"
+	"BulletCollision/CollisionShapes/btCompoundShape.h"
+	"BulletCollision/CollisionShapes/btTetrahedronShape.h"
+	"BulletCollision/CollisionShapes/btEmptyShape.h"
+	"BulletCollision/CollisionShapes/btMultiSphereShape.h"
+	"BulletCollision/CollisionShapes/btUniformScalingShape.h"
+	"BulletCollision/CollisionDispatch/btSphereSphereCollisionAlgorithm.h"
+	"BulletCollision/CollisionDispatch/btDefaultCollisionConfiguration.h"
+	"BulletCollision/CollisionDispatch/btCollisionDispatcher.h"
+	"BulletCollision/BroadphaseCollision/btSimpleBroadphase.h"
+	"BulletCollision/BroadphaseCollision/btAxisSweep3.h"
+	"BulletCollision/BroadphaseCollision/btMultiSapBroadphase.h"
+	"BulletCollision/BroadphaseCollision/btDbvtBroadphase.h"
+	"LinearMath/btQuaternion.h"
+	"LinearMath/btTransform.h"
+	"LinearMath/btDefaultMotionState.h"
+	"LinearMath/btQuickprof.h"
+	"LinearMath/btIDebugDraw.h"
+	"LinearMath/btSerializer.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionDispatch/btCollisionWorld.h
+	"LinearMath/btVector3.h"
+	"LinearMath/btTransform.h"
+	"btCollisionObject.h"
+	"btCollisionDispatcher.h"
+	"BulletCollision/BroadphaseCollision/btOverlappingPairCache.h"
+	"LinearMath/btAlignedObjectArray.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/LinearMath/btVector3.h
+	"btScalar.h"
+	"btMinMax.h"
+	"btAlignedAllocator.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/LinearMath/btScalar.h
+	<math.h>
+	<stdlib.h>
+	<float.h>
+	<ppcintrinsics.h>
+	<emmintrin.h>
+	<stdio.h>
+	<assert.h>
+	<assert.h>
+	<spu_printf.h>
+	<assert.h>
+	<smmintrin.h>
+	<tmmintrin.h>
+	<pmmintrin.h>
+	<emmintrin.h>
+	<arm_neon.h>
+	<assert.h>
+	<stdio.h>
+	<assert.h>
+	<arm_neon.h>
+	<arm_neon.h>
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/LinearMath/btMinMax.h
+	"btScalar.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/LinearMath/btAlignedAllocator.h
+	"btScalar.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/LinearMath/btTransform.h
+	"btMatrix3x3.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/LinearMath/btMatrix3x3.h
+	"btVector3.h"
+	"btQuaternion.h"
+	<stdio.h>
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/LinearMath/btQuaternion.h
+	"btVector3.h"
+	"btQuadWord.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/LinearMath/btQuadWord.h
+	"btScalar.h"
+	"btMinMax.h"
+	<altivec.h>
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionDispatch/btCollisionObject.h
+	"LinearMath/btTransform.h"
+	"LinearMath/btMotionState.h"
+	"LinearMath/btAlignedAllocator.h"
+	"LinearMath/btAlignedObjectArray.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/LinearMath/btMotionState.h
+	"btTransform.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/LinearMath/btAlignedObjectArray.h
+	"btScalar.h"
+	"btAlignedAllocator.h"
+	<memory.h>
+	<string.h>
+	<new>
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionDispatch/btCollisionDispatcher.h
+	"BulletCollision/BroadphaseCollision/btDispatcher.h"
+	"BulletCollision/NarrowPhaseCollision/btPersistentManifold.h"
+	"BulletCollision/CollisionDispatch/btManifoldResult.h"
+	"BulletCollision/BroadphaseCollision/btBroadphaseProxy.h"
+	"LinearMath/btAlignedObjectArray.h"
+	"btCollisionCreateFunc.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/BroadphaseCollision/btDispatcher.h
+	"LinearMath/btScalar.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/NarrowPhaseCollision/btPersistentManifold.h
+	"LinearMath/btVector3.h"
+	"LinearMath/btTransform.h"
+	"btManifoldPoint.h"
+	"LinearMath/btAlignedAllocator.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/NarrowPhaseCollision/btManifoldPoint.h
+	"LinearMath/btVector3.h"
+	"LinearMath/btTransformUtil.h"
+	"physics_effects/base_level/solver/pfx_constraint_row.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/LinearMath/btTransformUtil.h
+	"btTransform.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionDispatch/btManifoldResult.h
+	"BulletCollision/NarrowPhaseCollision/btPersistentManifold.h"
+	"BulletCollision/NarrowPhaseCollision/btDiscreteCollisionDetectorInterface.h"
+	"LinearMath/btTransform.h"
+	"BulletCollision/CollisionDispatch/btCollisionObjectWrapper.h"
+	"BulletCollision/CollisionDispatch/btCollisionObject.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/NarrowPhaseCollision/btDiscreteCollisionDetectorInterface.h
+	"LinearMath/btTransform.h"
+	"LinearMath/btVector3.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionDispatch/btCollisionObjectWrapper.h
+	"LinearMath/btScalar.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/BroadphaseCollision/btBroadphaseProxy.h
+	"LinearMath/btScalar.h"
+	"LinearMath/btVector3.h"
+	"LinearMath/btAlignedAllocator.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionDispatch/btCollisionCreateFunc.h
+	"LinearMath/btAlignedObjectArray.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/BroadphaseCollision/btOverlappingPairCache.h
+	"btBroadphaseInterface.h"
+	"btBroadphaseProxy.h"
+	"btOverlappingPairCallback.h"
+	"LinearMath/btAlignedObjectArray.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/BroadphaseCollision/btBroadphaseInterface.h
+	"btBroadphaseProxy.h"
+	"LinearMath/btVector3.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/BroadphaseCollision/btOverlappingPairCallback.h
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btBoxShape.h
+	"btPolyhedralConvexShape.h"
+	"btCollisionMargin.h"
+	"BulletCollision/BroadphaseCollision/btBroadphaseProxy.h"
+	"LinearMath/btVector3.h"
+	"LinearMath/btMinMax.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btPolyhedralConvexShape.h
+	"LinearMath/btMatrix3x3.h"
+	"btConvexInternalShape.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btConvexInternalShape.h
+	"btConvexShape.h"
+	"LinearMath/btAabbUtil2.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btConvexShape.h
+	"btCollisionShape.h"
+	"LinearMath/btVector3.h"
+	"LinearMath/btTransform.h"
+	"LinearMath/btMatrix3x3.h"
+	"btCollisionMargin.h"
+	"LinearMath/btAlignedAllocator.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btCollisionShape.h
+	"LinearMath/btTransform.h"
+	"LinearMath/btVector3.h"
+	"LinearMath/btMatrix3x3.h"
+	"BulletCollision/BroadphaseCollision/btBroadphaseProxy.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btCollisionMargin.h
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/LinearMath/btAabbUtil2.h
+	"btTransform.h"
+	"btVector3.h"
+	"btMinMax.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btSphereShape.h
+	"btConvexInternalShape.h"
+	"BulletCollision/BroadphaseCollision/btBroadphaseProxy.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btCapsuleShape.h
+	"btConvexInternalShape.h"
+	"BulletCollision/BroadphaseCollision/btBroadphaseProxy.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btCylinderShape.h
+	"btBoxShape.h"
+	"BulletCollision/BroadphaseCollision/btBroadphaseProxy.h"
+	"LinearMath/btVector3.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btConeShape.h
+	"btConvexInternalShape.h"
+	"BulletCollision/BroadphaseCollision/btBroadphaseProxy.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btStaticPlaneShape.h
+	"btConcaveShape.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btConcaveShape.h
+	"btCollisionShape.h"
+	"BulletCollision/BroadphaseCollision/btBroadphaseProxy.h"
+	"btTriangleCallback.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btTriangleCallback.h
+	"LinearMath/btVector3.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btConvexHullShape.h
+	"btPolyhedralConvexShape.h"
+	"BulletCollision/BroadphaseCollision/btBroadphaseProxy.h"
+	"LinearMath/btAlignedObjectArray.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btTriangleMesh.h
+	"btTriangleIndexVertexArray.h"
+	"LinearMath/btVector3.h"
+	"LinearMath/btAlignedObjectArray.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btTriangleIndexVertexArray.h
+	"btStridingMeshInterface.h"
+	"LinearMath/btAlignedObjectArray.h"
+	"LinearMath/btScalar.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btStridingMeshInterface.h
+	"LinearMath/btVector3.h"
+	"btTriangleCallback.h"
+	"btConcaveShape.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btConvexTriangleMeshShape.h
+	"btPolyhedralConvexShape.h"
+	"BulletCollision/BroadphaseCollision/btBroadphaseProxy.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btBvhTriangleMeshShape.h
+	"btTriangleMeshShape.h"
+	"btOptimizedBvh.h"
+	"LinearMath/btAlignedAllocator.h"
+	"btTriangleInfoMap.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btTriangleMeshShape.h
+	"btConcaveShape.h"
+	"btStridingMeshInterface.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btOptimizedBvh.h
+	"BulletCollision/BroadphaseCollision/btQuantizedBvh.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/BroadphaseCollision/btQuantizedBvh.h
+	<stdio.h>
+	<stdlib.h>
+	"LinearMath/btVector3.h"
+	"LinearMath/btAlignedAllocator.h"
+	"LinearMath/btAlignedAllocator.h"
+	"LinearMath/btAlignedObjectArray.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btTriangleInfoMap.h
+	"LinearMath/btHashMap.h"
+	"LinearMath/btSerializer.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/LinearMath/btHashMap.h
+	"btAlignedObjectArray.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/LinearMath/btSerializer.h
+	"btScalar.h"
+	"btHashMap.h"
+	<memory.h>
+	<string.h>
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btScaledBvhTriangleMeshShape.h
+	"BulletCollision/CollisionShapes/btBvhTriangleMeshShape.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btCompoundShape.h
+	"btCollisionShape.h"
+	"LinearMath/btVector3.h"
+	"LinearMath/btTransform.h"
+	"LinearMath/btMatrix3x3.h"
+	"btCollisionMargin.h"
+	"LinearMath/btAlignedObjectArray.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btTetrahedronShape.h
+	"btPolyhedralConvexShape.h"
+	"BulletCollision/BroadphaseCollision/btBroadphaseProxy.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btEmptyShape.h
+	"btConcaveShape.h"
+	"LinearMath/btVector3.h"
+	"LinearMath/btTransform.h"
+	"LinearMath/btMatrix3x3.h"
+	"btCollisionMargin.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btMultiSphereShape.h
+	"btConvexInternalShape.h"
+	"BulletCollision/BroadphaseCollision/btBroadphaseProxy.h"
+	"LinearMath/btAlignedObjectArray.h"
+	"LinearMath/btAabbUtil2.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btUniformScalingShape.h
+	"btConvexShape.h"
+	"BulletCollision/BroadphaseCollision/btBroadphaseProxy.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionDispatch/btSphereSphereCollisionAlgorithm.h
+	"btActivatingCollisionAlgorithm.h"
+	"BulletCollision/BroadphaseCollision/btBroadphaseProxy.h"
+	"BulletCollision/CollisionDispatch/btCollisionCreateFunc.h"
+	"btCollisionDispatcher.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionDispatch/btActivatingCollisionAlgorithm.h
+	"BulletCollision/BroadphaseCollision/btCollisionAlgorithm.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/BroadphaseCollision/btCollisionAlgorithm.h
+	"LinearMath/btScalar.h"
+	"LinearMath/btAlignedObjectArray.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionDispatch/btDefaultCollisionConfiguration.h
+	"btCollisionConfiguration.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionDispatch/btCollisionConfiguration.h
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/BroadphaseCollision/btSimpleBroadphase.h
+	"btOverlappingPairCache.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/BroadphaseCollision/btAxisSweep3.h
+	"LinearMath/btVector3.h"
+	"btOverlappingPairCache.h"
+	"btBroadphaseInterface.h"
+	"btBroadphaseProxy.h"
+	"btOverlappingPairCallback.h"
+	"btDbvtBroadphase.h"
+	<stdio.h>
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.h
+	"BulletCollision/BroadphaseCollision/btDbvt.h"
+	"BulletCollision/BroadphaseCollision/btOverlappingPairCache.h"
+	"LinearMath/btQuickprof.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/BroadphaseCollision/btDbvt.h
+	"LinearMath/btAlignedObjectArray.h"
+	"LinearMath/btVector3.h"
+	"LinearMath/btTransform.h"
+	"LinearMath/btAabbUtil2.h"
+	<emmintrin.h>
+	<memory.h>
+	<string.h>
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/LinearMath/btQuickprof.h
+	<stdio.h>
+	"btScalar.h"
+	"btAlignedAllocator.h"
+	<new>
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/BroadphaseCollision/btMultiSapBroadphase.h
+	"btBroadphaseInterface.h"
+	"LinearMath/btAlignedObjectArray.h"
+	"btOverlappingPairCache.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/LinearMath/btDefaultMotionState.h
+	"btMotionState.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/LinearMath/btIDebugDraw.h
+	"btVector3.h"
+	"btTransform.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.h
+	"btDynamicsWorld.h"
+	"LinearMath/btAlignedObjectArray.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/Dynamics/btDynamicsWorld.h
+	"BulletCollision/CollisionDispatch/btCollisionWorld.h"
+	"BulletDynamics/ConstraintSolver/btContactSolverInfo.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/ConstraintSolver/btContactSolverInfo.h
+	"LinearMath/btScalar.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/Dynamics/btSimpleDynamicsWorld.h
+	"btDynamicsWorld.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/Dynamics/btRigidBody.h
+	"LinearMath/btAlignedObjectArray.h"
+	"LinearMath/btTransform.h"
+	"BulletCollision/BroadphaseCollision/btBroadphaseProxy.h"
+	"BulletCollision/CollisionDispatch/btCollisionObject.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/ConstraintSolver/btPoint2PointConstraint.h
+	"LinearMath/btVector3.h"
+	"btJacobianEntry.h"
+	"btTypedConstraint.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/ConstraintSolver/btJacobianEntry.h
+	"LinearMath/btMatrix3x3.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/ConstraintSolver/btTypedConstraint.h
+	"LinearMath/btScalar.h"
+	"btSolverConstraint.h"
+	"BulletDynamics/Dynamics/btRigidBody.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/ConstraintSolver/btSolverConstraint.h
+	"LinearMath/btVector3.h"
+	"LinearMath/btMatrix3x3.h"
+	"btJacobianEntry.h"
+	"LinearMath/btAlignedObjectArray.h"
+	"btSolverBody.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/ConstraintSolver/btSolverBody.h
+	"LinearMath/btVector3.h"
+	"LinearMath/btMatrix3x3.h"
+	"LinearMath/btAlignedAllocator.h"
+	"LinearMath/btTransformUtil.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/ConstraintSolver/btHingeConstraint.h
+	"LinearMath/btVector3.h"
+	"btJacobianEntry.h"
+	"btTypedConstraint.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/ConstraintSolver/btConeTwistConstraint.h
+	"LinearMath/btVector3.h"
+	"btJacobianEntry.h"
+	"btTypedConstraint.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/ConstraintSolver/btGeneric6DofConstraint.h
+	"LinearMath/btVector3.h"
+	"btJacobianEntry.h"
+	"btTypedConstraint.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/ConstraintSolver/btSliderConstraint.h
+	"LinearMath/btVector3.h"
+	"btJacobianEntry.h"
+	"btTypedConstraint.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/ConstraintSolver/btGeneric6DofSpringConstraint.h
+	"LinearMath/btVector3.h"
+	"btTypedConstraint.h"
+	"btGeneric6DofConstraint.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/ConstraintSolver/btUniversalConstraint.h
+	"LinearMath/btVector3.h"
+	"btTypedConstraint.h"
+	"btGeneric6DofConstraint.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/ConstraintSolver/btHinge2Constraint.h
+	"LinearMath/btVector3.h"
+	"btTypedConstraint.h"
+	"btGeneric6DofSpring2Constraint.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/ConstraintSolver/btGeneric6DofSpring2Constraint.h
+	"LinearMath/btVector3.h"
+	"btJacobianEntry.h"
+	"btTypedConstraint.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/ConstraintSolver/btGearConstraint.h
+	"BulletDynamics/ConstraintSolver/btTypedConstraint.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/ConstraintSolver/btFixedConstraint.h
+	"btGeneric6DofSpring2Constraint.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/ConstraintSolver/btSequentialImpulseConstraintSolver.h
+	"BulletDynamics/ConstraintSolver/btTypedConstraint.h"
+	"BulletDynamics/ConstraintSolver/btContactSolverInfo.h"
+	"BulletDynamics/ConstraintSolver/btSolverBody.h"
+	"BulletDynamics/ConstraintSolver/btSolverConstraint.h"
+	"BulletCollision/NarrowPhaseCollision/btManifoldPoint.h"
+	"BulletDynamics/ConstraintSolver/btConstraintSolver.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/ConstraintSolver/btConstraintSolver.h
+	"LinearMath/btScalar.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/Vehicle/btRaycastVehicle.h
+	"BulletDynamics/Dynamics/btRigidBody.h"
+	"BulletDynamics/ConstraintSolver/btTypedConstraint.h"
+	"btVehicleRaycaster.h"
+	"LinearMath/btAlignedObjectArray.h"
+	"btWheelInfo.h"
+	"BulletDynamics/Dynamics/btActionInterface.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/Vehicle/btVehicleRaycaster.h
+	"LinearMath/btVector3.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/Vehicle/btWheelInfo.h
+	"LinearMath/btVector3.h"
+	"LinearMath/btTransform.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletDynamics/Dynamics/btActionInterface.h
+	"LinearMath/btScalar.h"
+	"btRigidBody.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/Gimpact/btGImpactShape.h
+	"BulletCollision/CollisionShapes/btCollisionShape.h"
+	"BulletCollision/CollisionShapes/btTriangleShape.h"
+	"BulletCollision/CollisionShapes/btStridingMeshInterface.h"
+	"BulletCollision/CollisionShapes/btCollisionMargin.h"
+	"BulletCollision/CollisionDispatch/btCollisionWorld.h"
+	"BulletCollision/CollisionShapes/btConcaveShape.h"
+	"BulletCollision/CollisionShapes/btTetrahedronShape.h"
+	"LinearMath/btVector3.h"
+	"LinearMath/btTransform.h"
+	"LinearMath/btMatrix3x3.h"
+	"LinearMath/btAlignedObjectArray.h"
+	"btGImpactQuantizedBvh.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/CollisionShapes/btTriangleShape.h
+	"btConvexShape.h"
+	"btBoxShape.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/Gimpact/btGImpactQuantizedBvh.h
+	"btGImpactBvh.h"
+	"btQuantization.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/Gimpact/btGImpactBvh.h
+	"LinearMath/btAlignedObjectArray.h"
+	"btBoxCollision.h"
+	"btTriangleShapeEx.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/Gimpact/btBoxCollision.h
+	"LinearMath/btTransform.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/Gimpact/btTriangleShapeEx.h
+	"BulletCollision/CollisionShapes/btCollisionShape.h"
+	"BulletCollision/CollisionShapes/btTriangleShape.h"
+	"btBoxCollision.h"
+	"btClipPolygon.h"
+	"btGeometryOperations.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/Gimpact/btClipPolygon.h
+	"LinearMath/btTransform.h"
+	"LinearMath/btGeometryUtil.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/LinearMath/btGeometryUtil.h
+	"btVector3.h"
+	"btAlignedObjectArray.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/Gimpact/btGeometryOperations.h
+	"btBoxCollision.h"
+
+1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/Gimpact/btQuantization.h
+	"LinearMath/btTransform.h"
+
+1476735101 source:/home/wbr/SteamTanks/tank.cpp
+	"tank.h"
+	"irrlicht.h"
+	<btBulletDynamicsCommon.h>
+	"funcs.h"
+	"motionstate.h"
+
+1476692063 /home/wbr/SteamTanks/enums.h
+
+1476734964 /home/wbr/SteamTanks/tank.h
+	<irrlicht.h>
+	<btBulletDynamicsCommon.h>
+	"iostream"
+	<string>
+	<vector>
+	<LinearMath/btIDebugDraw.h>
+	<BulletCollision/Gimpact/btGImpactShape.h>
+	"enums.h"
+	"funcs.h"
+	"motionstate.h"
+
+1476713639 /home/wbr/SteamTanks/funcs
+
+1476731735 /home/wbr/SteamTanks/funcs.h
+	"irrlicht.h"
+	"btBulletCollisionCommon.h"
+
+1476732841 /home/wbr/SteamTanks/motionstate.h
+	"irrlicht.h"
+	"btBulletDynamicsCommon.h"
+
