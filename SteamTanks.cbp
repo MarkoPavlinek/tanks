@@ -8,7 +8,7 @@
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/SteamTanks" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="/home/wbr/Documents/irrlicht-1.8.3/bin/" />
+				<Option working_dir="bin/Debug" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -34,23 +34,28 @@
 			<Add option="-Wall" />
 			<Add option="-std=c++11" />
 			<Add directory="/home/wbr/Documents/irrlicht-1.8.3/include" />
-			<Add directory="../irrtest/LIBS/bullet/include/bullet" />
+			<Add directory="Libs/bullet/include/bullet" />
 		</Compiler>
 		<Linker>
 			<Add library="Irrlicht" />
 			<Add library="GL" />
 			<Add library="GLU" />
 			<Add library="Xxf86vm" />
-			<Add library="../Documents/irrlicht-1.8.3/lib/Linux/libIrrlicht.a" />
+			<Add library="Libs/irr1.83/lib/Linux/libIrrlicht.a" />
 			<Add library="X11" />
-			<Add library="/home/wbr/irrtest/LIBS/bullet/lib/libBulletCollision.so" />
-			<Add library="../irrtest/LIBS/bullet/lib/libBulletSoftBody.so" />
-			<Add library="/home/wbr/irrtest/LIBS/bullet/lib/libBulletDynamics.so" />
-			<Add library="../irrtest/LIBS/bullet/lib/libLinearMath.so" />
-			<Add directory="/home/wbr/Documents/irrlicht-1.8.3/lib/" />
-			<Add directory="../irrtest/LIBS/bullet/lib" />
+			<Add library="Libs/bullet/lib/libLinearMath.so" />
+			<Add library="Libs/bullet/lib/libBulletSoftBody.so" />
+			<Add library="Libs/bullet/lib/libBulletDynamics.so" />
+			<Add library="Libs/bullet/lib/libBulletCollision.so" />
+			<Add directory="Libs/irr1.83" />
+			<Add directory="Libs/bullet/lib" />
 		</Linker>
+		<Unit filename="enums.h" />
+		<Unit filename="funcs.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="motionstate.h" />
+		<Unit filename="tank.cpp" />
+		<Unit filename="tank.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

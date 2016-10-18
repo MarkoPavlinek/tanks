@@ -10,6 +10,7 @@
 #include "enums.h"
 #include"tank.h"
 #include "motionstate.h"
+#include "funcs.h"
     using namespace std;
     using namespace irr;
     using namespace core;
@@ -38,7 +39,7 @@ static ILogger *irrLog;
 //static list<btRigidBody *> Objects;
 static irr::scene::ICameraSceneNode *debugCamera;
 static bool draw_irr = true;
-static bool draw_phy = true;
+static bool draw_phy = false;
 
 
 
@@ -106,8 +107,8 @@ btTriangleMesh* makeMesh(irr::scene::ISceneNode * node);
 
 
 
-static tank Player;
-static tank *Dummy;
+ tank Player;
+ tank *Dummy;
 
 
 
@@ -981,7 +982,7 @@ int main(int argc, char** argv)
 {
     // Initialize irrlicht
 	EventReceiverClass Receiver;
-	irrDevice = createDevice(video::EDT_OPENGL, dimension2d<u32>(ResX, ResY), 32, false, false, false, &Receiver);
+	irrDevice = createDevice(irr::video::EDT_OPENGL, dimension2d<u32>(ResX, ResY), 32, false, false, false, &Receiver);
 	irrGUI = irrDevice->getGUIEnvironment();
 	irrTimer = irrDevice->getTimer();
 	irrScene = irrDevice->getSceneManager();
@@ -1009,7 +1010,7 @@ int main(int argc, char** argv)
 
 
     scene::IMeshSceneNode* terrain = irrScene->addMeshSceneNode(
-    irrScene->getMesh("/home/wbr/SteamTanks/bin/Debug/Models/teren.obj")
+    irrScene->getMesh("./Models/teren.obj")
     ,0,1//);
      ,core::vector3df(0.f,0.0,0.0f),
      core::vector3df(0.f,0.0,0.0f),
@@ -1037,6 +1038,7 @@ int main(int argc, char** argv)
 //
 
    terrain->setMaterialFlag(irr::video::EMF_WIREFRAME,true);
+   terrain->setMaterialFlag(irr::video::EMF_LIGHTING,true);
    terrain->setVisible(draw_irr);
    makeBulletMeshFromIrrlichtNode(terrain,0);
 
@@ -1075,9 +1077,18 @@ irr::gui::IGUIStaticText *fps = irrGUI->addStaticText(L"fps deltatime", rect<s32
 World->setDebugDrawer(&m_BulletDebug);
 
 u32 TimeStamp = irrTimer->getTime(), DeltaTime = 0;
+
 irrScene->setActiveCamera(debugCamera);
 	while(!Done) {
+if (!draw_irr)
+{
+terrain->setMaterialFlag(irr::video::EMF_WIREFRAME,true);
+}
+if (draw_irr)
+{
+terrain->setMaterialFlag(irr::video::EMF_WIREFRAME,false);
 
+}
 	    Player.updateCamera();
 
         if (draw_irr)
@@ -1123,7 +1134,7 @@ irrScene->setActiveCamera(debugCamera);
                 irr::core::vector3df toMousePosition(mousePosition - Player.DomeCamera->getAbsolutePosition());
 
              //   Player.rotateTurret(mousePosition);
-                std::cout<<"Mouse Point"<< Receiver.GetMouseState().Position.X <<" "<< Receiver.GetMouseState().Position.Y <<" " <<".\n ";
+                //std::cout<<"Mouse Point"<< Receiver.GetMouseState().Position.X <<" "<< Receiver.GetMouseState().Position.Y <<" " <<".\n ";
             }
         }
             //Set viewpoint to the first quarter (left top)
@@ -1214,9 +1225,9 @@ void BulletDebugRender::drawLine( const btVector3& from,const btVector3& to, con
 
     matrix4 id;
     id.makeIdentity();
-    irr::video::SMaterial debugmaterial;
-    debugmaterial.Lighting = false;
-    irrDriver->setMaterial(debugmaterial);
+    irr::video::SMaterial dbgmat;
+    dbgmat.Lighting = false;
+ //   irrDriver->setMaterial(dbgmat);
     irrDriver->setTransform(video::ETS_WORLD, id);
     irrDriver->draw3DLine (core::vector3df(from[0],from[1],from[2]), core::vector3df(to[0],to[1],to[2]), fromC.toSColor()  ) ;
    // std::cout<<"alpha " << Scolor.getAlpha() <<" red" <<Scolor.getRed() <<" green " << Scolor.getGreen()<<" blue "<< Scolor.getBlue()<<".\n";
@@ -1243,7 +1254,7 @@ void BulletDebugRender::drawContactPoint(const btVector3& PointOnB
     id.makeIdentity();
     irr::video::SMaterial debugmaterial;
     debugmaterial.Lighting = false;
-    irrDriver->setMaterial(debugmaterial);
+  //  irrDriver->setMaterial(debugmaterial);
     irrDriver->setTransform(video::ETS_WORLD, id);
 
     const btVector3 to(PointOnB + normalOnB*distance);
@@ -1509,7 +1520,7 @@ void ClearObjects() {
 
 				case KEY_KEY_O:
 					Player.TankNode[RIGIDS_HULL]->setVisible(true);
-							Player.TankNode[RIGIDS_DOME]->setVisible(true);
+                    Player.TankNode[RIGIDS_DOME]->setVisible(true);
 					//Dummy->node->setVisible(true);
 					draw_irr = true;
 				//m_BulletDebug.setDebugMode(0);

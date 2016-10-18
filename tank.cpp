@@ -14,7 +14,7 @@ tank::tank(btDiscreteDynamicsWorld *World, irr::scene::ISceneManager *scene,irr:
 {
 irr::io::path filename;
 mass = Tmass;
-filename = "/home/wbr/SteamTanks/bin/Debug/Models/Tank/body.obj";
+filename = "./Models/Tank/body.obj";
 TankNode[RIGIDS_HULL] = scene->addMeshSceneNode(scene->getMesh(filename),0,101, position);
 TankNode[RIGIDS_HULL]->setMaterialFlag(irr::video::EMF_WIREFRAME,true);
 
@@ -29,16 +29,17 @@ TankNode[TANK_RIGHTRACK]->setMaterialFlag(irr::video::EMF_WIREFRAME,true);
 */
 }
 
-filename = "/home/wbr/SteamTanks/bin/Debug/Models/Tank/dome.obj";
+filename = "./Models/Tank/dome.obj";
 TankNode[RIGIDS_DOME] = scene->addMeshSceneNode(scene->getMesh(filename),0,100,position+core::vector3df(1.51,0.75,0));
 TankNode[RIGIDS_DOME]->setMaterialFlag(irr::video::EMF_WIREFRAME,true);
-filename = "/home/wbr/SteamTanks/bin/Debug/Models/Tank/cannon.obj";
+filename = "./Models/Tank/cannon.obj";
 TankNode[RIGIDS_CANNON] = scene->addMeshSceneNode(scene->getMesh(filename),0,100,position+core::vector3df(-0.35,0.63,0));
 TankNode[RIGIDS_CANNON]->setMaterialFlag(irr::video::EMF_WIREFRAME,true);
 
-filename = "/home/wbr/SteamTanks/bin/Debug/Models/Tank/wheel.obj";
+filename = "./Models/Tank/wheel.obj";
 TankNode[RIGIDS_WHEEL] = scene->addMeshSceneNode(scene->getMesh(filename),0,100,position+core::vector3df(0,0,0));
 TankNode[RIGIDS_WHEEL]->setMaterialFlag(irr::video::EMF_WIREFRAME,true);
+TankNode[RIGIDS_CANNON]->setMaterialFlag(irr::video::EMF_LIGHTING,false);
 
 
 //scene->addSphereSceneNode(.5f,16,DomeNode,-1,DomeCamera->getAbsolutePosition());
