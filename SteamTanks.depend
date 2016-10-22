@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1476776181 source:/home/wbr/SteamTanks/main.cpp
+1477125182 source:/home/wbr/SteamTanks/main.cpp
 	<irrlicht.h>
 	<btBulletDynamicsCommon.h>
 	"iostream"
@@ -1576,36 +1576,30 @@
 1452292601 /home/wbr/irrtest/LIBS/bullet/include/bullet/BulletCollision/Gimpact/btQuantization.h
 	"LinearMath/btTransform.h"
 
-1476775241 source:/home/wbr/SteamTanks/tank.cpp
+1477126456 source:/home/wbr/SteamTanks/tank.cpp
 	"tank.h"
-	"irrlicht.h"
-	<btBulletDynamicsCommon.h>
-	"funcs.h"
-	"motionstate.h"
+	"classes.h"
 
-1476692063 /home/wbr/SteamTanks/enums.h
+1476778543 /home/wbr/SteamTanks/enums.h
 
-1476734964 /home/wbr/SteamTanks/tank.h
+1477126176 /home/wbr/SteamTanks/tank.h
 	<irrlicht.h>
 	<btBulletDynamicsCommon.h>
-	"iostream"
-	<string>
-	<vector>
-	<LinearMath/btIDebugDraw.h>
-	<BulletCollision/Gimpact/btGImpactShape.h>
-	"enums.h"
 	"funcs.h"
+	"enums.h"
 	"motionstate.h"
+	"classes.h"
 
 1476713639 /home/wbr/SteamTanks/funcs
 
-1476731735 /home/wbr/SteamTanks/funcs.h
-	"irrlicht.h"
-	"btBulletCollisionCommon.h"
+1476874352 /home/wbr/SteamTanks/funcs.h
+	<irrlicht.h>
+	<btBulletDynamicsCommon.h>
 
-1476732841 /home/wbr/SteamTanks/motionstate.h
-	"irrlicht.h"
-	"btBulletDynamicsCommon.h"
+1476954493 /home/wbr/SteamTanks/motionstate.h
+	<irrlicht.h>
+	<btBulletDynamicsCommon.h>
+	"classes.h"
 
 1452292601 /home/wbr/SteamTanks/Libs/bullet/include/bullet/btBulletDynamicsCommon.h
 	"btBulletCollisionCommon.h"
@@ -3169,4 +3163,22 @@
 	"aabbox3d.h"
 	"matrix4.h"
 	"IVideoDriver.h"
+
+1476865598 /home/wbr/SteamTanks//tank.h
+	"enums.h"
+	"funcs.h"
+	"tank.h"
+	"motionstate.h"
+
+1476778543 /home/wbr/SteamTanks//enums.h
+
+1476865598 /home/wbr/SteamTanks//funcs.h
+
+1476865269 /home/wbr/SteamTanks//motionstate.h
+	<tank.h>
+	"irrlicht.h"
+	"btBulletDynamicsCommon.h"
+	"enums.h"
+
+1476886228 /home/wbr/SteamTanks/classes.h
 

@@ -1,6 +1,15 @@
 #ifndef ENUMS_H_INCLUDED
 #define ENUMS_H_INCLUDED
-
+enum OBJ_typ
+{
+OBJ_typ_terrain=0,
+OBJ_typ_tank,
+OBJ_typ_shell,
+OBJ_typ_tree,
+OBJ_typ_brick,
+OBJ_typ_concrete,
+OBJ_typ_COUNT
+};
 enum RIGIDS
 {
 RIGIDS_HULL = 0,

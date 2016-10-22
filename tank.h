@@ -1,25 +1,27 @@
 #include <irrlicht.h>
 #include <btBulletDynamicsCommon.h>
-#include "iostream"
-#include <string>
-#include <vector>
-#include <LinearMath/btIDebugDraw.h>
-#include <BulletCollision/Gimpact/btGImpactShape.h>
-#include "enums.h"
 #include "funcs.h"
+#include "enums.h"
 #include "motionstate.h"
-#ifndef TANK_H_INCLUDED
-#define TANK_H_INCLUDED
+#include "classes.h"
+
+using namespace irr;
 
 
-class tank
+
+
+class tank : public anchor_object
 {
 
 public:
+irr::video::SMaterial *material;
+
+tank():anchor_object(){};
 
 
-tank();
-tank(btDiscreteDynamicsWorld *World,irr::scene::ISceneManager *scene,irr::core::vector3df position,btScalar Tmass);
+tank(OBJ_typ tyep,btDiscreteDynamicsWorld *World,irr::scene::ISceneManager *scene,irr::core::vector3df position,btScalar Tmass);
+
+
 void createPhy(btDiscreteDynamicsWorld *World);
 void move_Cannon(float up = 0.0, float left = 0.0);
 void rotateTurret(float pos);
@@ -36,7 +38,8 @@ void updateCamera();
 void setLeftTrack(float force);
 void setRightTrack(float force);
 void fire(btDiscreteDynamicsWorld *World,irr::scene::ISceneManager *scene);
-
+void setPosition(irr::core::vector3df pos);
+void setRotation(irr::core::vector3df rot);
 
 irr::scene::ISceneNode* TankNode[RIGIDS_COUNT];
 irr::scene::ISceneNode* WheelsNode_R[WHEELS_COUNT];
@@ -71,10 +74,13 @@ float REngineForce = 0.f;
 float maxBrakeForce=500.f;
 float BreakForce = 0.f;
 
+void setWF();
+void setLig();
 
+void startupWheels();
 
 };
-class Shell
+class Shell : public anchor_object
 {
 public:
 
@@ -87,6 +93,7 @@ irr::scene::ISceneNode* Node;
 
 Shell(btDiscreteDynamicsWorld *World, irr::scene::ISceneManager *irrScene,btVector3 pos,btVector3 target,SHELL_TYPE Shell_typ = SHELL_TYPE_AP)
 {
+this->typ = OBJ_typ_shell;
 this->Node = irrScene-> addSphereSceneNode(.2,16,0,-1,core::vector3df(pos[0],pos[1],pos[2]));
 
 btTransform localtrans;
@@ -94,13 +101,25 @@ localtrans.setOrigin(pos);
 btCollisionShape *shape =new btSphereShape(0.2);
 btVector3 localinertia;
 shape->calculateLocalInertia(1,localinertia);
-Rig = new btRigidBody(10,new MotionState(localtrans,this->Node),shape,localinertia);
+Rig = new btRigidBody(10,new MotionState2(localtrans, this),shape,localinertia);
 
 Rig->applyCentralImpulse(target*1000);
 shellType = Shell_typ;
 World->addRigidBody(Rig);
+
 //Objects.push_back(Rig);
+}
+void setPosition(irr::core::vector3df pos)
+{
+this->Node->setPosition(pos);
+}
+void setRotation(irr::core::vector3df rot)
+{
+
+this->Node->setPosition(rot);
+
+
 }
 };
 
-#endif
+

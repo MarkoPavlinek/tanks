@@ -1,9 +1,8 @@
-#include "irrlicht.h"
-#include "btBulletCollisionCommon.h"
+#include <irrlicht.h>
+#include <btBulletDynamicsCommon.h>
 
-
-using namespace irr;
 using namespace irr::core;
+
 #ifndef FUNCS_H_INCLUDED
 #define FUNCS_H_INCLUDED
 auto toBtVector = [ &]( const vector3df & vec,const vector3df & scal ) -> btVector3

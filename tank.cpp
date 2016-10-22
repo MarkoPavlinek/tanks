@@ -1,22 +1,27 @@
+//#include <irrlicht.h>
+//#include <btBulletDynamicsCommon.h>
+//#include "funcs.h"
+//#include "enums.h"
+//#include "motionstate.h"
 #include "tank.h"
-#include"irrlicht.h"
-#include <btBulletDynamicsCommon.h>
-#include"funcs.h"
-#include "motionstate.h"
+#include"classes.h"
 using namespace irr;
 
-tank::tank()
-{
-}
 
 
-tank::tank(btDiscreteDynamicsWorld *World, irr::scene::ISceneManager *scene,irr::core::vector3df position,btScalar Tmass)
+tank::tank(OBJ_typ tyep,btDiscreteDynamicsWorld *World, irr::scene::ISceneManager *scene,irr::core::vector3df position,btScalar Tmass):anchor_object(typ)
 {
+
+
+this->typ = tyep;
 irr::io::path filename;
 mass = Tmass;
 filename = "./Models/Tank/body.obj";
 TankNode[RIGIDS_HULL] = scene->addMeshSceneNode(scene->getMesh(filename),0,101, position);
-TankNode[RIGIDS_HULL]->setMaterialFlag(irr::video::EMF_WIREFRAME,true);
+TankNode[RIGIDS_HULL]->setMaterialFlag(irr::video::EMF_LIGHTING,true);
+TankNode[RIGIDS_HULL]->setMaterialFlag(irr::video::EMF_FRONT_FACE_CULLING,false);
+
+TankNode[RIGIDS_HULL]->getMaterial(0).SpecularColor.set(0,255,255,0);
 
 {
 /*
@@ -61,7 +66,7 @@ DomeCamera->setFOV(45);
 
 TankNode[RIGIDS_HULL]->setName("Active");
 
-std::cout << TankNode[RIGIDS_HULL]->getName() <<".\n";
+//std::cout << TankNode[RIGIDS_HULL]->getName() <<".\n";
 //scene->addSphereSceneNode(.2,16,DomeCamera);
 //scene->addSphereSceneNode(.5,16,DriverCamera);
 //DomeCamera->setPosition(CamHelp->getPosition());
@@ -83,7 +88,7 @@ std::cout << TankNode[RIGIDS_HULL]->getName() <<".\n";
 // << ".\n";
 
 createPhy(World);
-
+startupWheels();
 }
 
 void tank::createPhy(btDiscreteDynamicsWorld *World)
@@ -105,7 +110,7 @@ btTransform transform;
 transform.setIdentity();
 transform.setOrigin(toBtVector(this->TankNode[RIGIDS_HULL]->getAbsolutePosition(),this->TankNode[RIGIDS_HULL]->getScale()));
 
-Body_Rigs[RIGIDS_HULL] = localCreateRigidBody(btScalar(5.), transform, Body_Shapes[RIGIDS_HULL],RIGIDS_HULL);
+Body_Rigs[RIGIDS_HULL] = localCreateRigidBody(btScalar(20000.), transform, Body_Shapes[RIGIDS_HULL],RIGIDS_HULL);
 Body_Rigs[RIGIDS_HULL]->setUserPointer(TankNode[RIGIDS_HULL]);
 World->addRigidBody(Body_Rigs[RIGIDS_HULL]);
 //Objects.push_back(Body_Rigs[RIGIDS_HULL]);
@@ -155,7 +160,7 @@ transform.setIdentity();
 transform.setOrigin(WHEELS_positions[i]+TankAbsolutePos);
 WheelsNode_L[i] = TankNode[RIGIDS_WHEEL]->clone();
 {
-Wheels_Rigs_L[i] = localCreateRigidWheel(1,transform,Body_Shapes[RIGIDS_WHEEL],WheelsNode_L[i]);
+Wheels_Rigs_L[i] = localCreateRigidWheel(500,transform,Body_Shapes[RIGIDS_WHEEL],WheelsNode_L[i]);
 Wheels_Rigs_L[i]->setActivationState(DISABLE_DEACTIVATION);
 World->addRigidBody(Wheels_Rigs_L[i]);
 //Objects.push_back(Wheels_Rigs_L[i]);
@@ -179,7 +184,7 @@ World->addRigidBody(Wheels_Rigs_L[i]);
         WheelsSprings_L[i] = wheeljoint;
         wheeljoint->enableSpring(0,true);
         wheeljoint->setStiffness(0,2.f);
-        wheeljoint->setDamping(0,20.f);
+        wheeljoint->setDamping(0,20000.f);
         btRotationalLimitMotor* rotLim = wheeljoint->getRotationalLimitMotor(0);
         rotLim->m_enableMotor=true;
         rotLim->m_targetVelocity = 0.f;
@@ -196,7 +201,7 @@ transform.setIdentity();
 transform.setOrigin(WHEELS_positions[i]+TankAbsolutePos);
 WheelsNode_R[i] = TankNode[RIGIDS_WHEEL]->clone();
 {
-Wheels_Rigs_R[i] = localCreateRigidWheel(1.,transform,Body_Shapes[RIGIDS_WHEEL],WheelsNode_R[i]);
+Wheels_Rigs_R[i] = localCreateRigidWheel(500.,transform,Body_Shapes[RIGIDS_WHEEL],WheelsNode_R[i]);
 Wheels_Rigs_R[i]->setActivationState(DISABLE_DEACTIVATION);
 World->addRigidBody(Wheels_Rigs_R[i]);
 //Objects.push_back(Wheels_Rigs_R[i]);
@@ -216,7 +221,7 @@ World->addRigidBody(Wheels_Rigs_R[i]);
         WheelsSprings_R[i] = wheeljoint;
         wheeljoint->enableSpring(0,true);
         wheeljoint->setStiffness(0,2.f);
-        wheeljoint->setDamping(0,20.f);
+        wheeljoint->setDamping(0,20000000.f);
         btRotationalLimitMotor* rotLim = wheeljoint->getRotationalLimitMotor(0);
         rotLim->m_enableMotor=true;
         rotLim->m_targetVelocity = 0.f;
@@ -375,10 +380,12 @@ bool isDynamic = (mass != 0.f);
 	if (isDynamic)
 		shape->calculateLocalInertia(mass,localInertia);
 
-	MotionState* myMotionState = new MotionState(startTransform,this->TankNode[type]);
+
+	MyMotionState* myMotionState = new MyMotionState(startTransform,this->TankNode[type]);
 	btRigidBody::btRigidBodyConstructionInfo rbInfo(mass,myMotionState,shape,localInertia);
 	rbInfo.m_additionalDamping = true;
 	btRigidBody* body = new btRigidBody(rbInfo);
+
 
    return body;
 
@@ -394,11 +401,11 @@ bool isDynamic = (mass != 0.f);
 	if (isDynamic)
 		shape->calculateLocalInertia(mass,localInertia);
 
-	MotionState* myMotionState = new MotionState(startTransform,node);
+	MyMotionState* myMotionState = new MyMotionState(startTransform,node);
 	btRigidBody::btRigidBodyConstructionInfo rbInfo(mass,myMotionState,shape,localInertia);
 	rbInfo.m_additionalDamping = true;
 	rbInfo.m_friction = 5000.f;
-	rbInfo.m_rollingFriction = 200000.f;
+	rbInfo.m_rollingFriction = 20000000.f;
 	btRigidBody* body = new btRigidBody(rbInfo);
 
    return body;
@@ -432,7 +439,26 @@ this->DriverCamera->setTarget(this->DriverCamera->getAbsolutePosition()+camTH);
 
 //std::cout<<DriverCamera->getTarget().X<< " "<<DriverCamera->getTarget().Y<<" "<<DriverCamera->getTarget().Z<<"\n";
 }
+void tank::startupWheels()
+{
+btRotationalLimitMotor* rotLim;
+for(int i = 0; i< WHEELS_COUNT;i++)
+{
 
+ rotLim = this->WheelsSprings_L[i]->getRotationalLimitMotor(2);
+ rotLim->m_enableMotor=true;
+ rotLim->m_targetVelocity = 0;
+ rotLim->m_maxLimitForce = 50000000.f;
+ rotLim->m_maxMotorForce = 50000000.f;
+ rotLim = this->WheelsSprings_R[i]->getRotationalLimitMotor(2);
+ rotLim->m_enableMotor=true;
+ rotLim->m_targetVelocity = 0;
+ rotLim->m_maxLimitForce = 50000000.f;
+ rotLim->m_maxMotorForce = 50000000.f;
+//this->Body_Rigs[TANK_LEFTRACK]->applyCentralForce(btVector3(LEngineForce,0,0));
+}
+
+}
 void tank::setLeftTrack(float force)
 {
 
@@ -449,10 +475,11 @@ for(int i = 0; i< WHEELS_COUNT;i++)
  btRotationalLimitMotor* rotLim = this->WheelsSprings_L[i]->getRotationalLimitMotor(2);
  rotLim->m_enableMotor=true;
  rotLim->m_targetVelocity = LEngineForce;
+// rotLim->m_maxLimitForce = 50000.f;
 
 //this->Body_Rigs[TANK_LEFTRACK]->applyCentralForce(btVector3(LEngineForce,0,0));
 }
-std::cout<<LEngineForce<<"\n";
+//std::cout<<LEngineForce<<"\n";
 
 }
 void tank::setRightTrack(float force)
@@ -474,7 +501,7 @@ for(int i = 0; i< WHEELS_COUNT;i++)
  rotLim->m_targetVelocity = REngineForce;
 //this->Body_Rigs[TANK_LEFTRACK]->applyCentralForce(btVector3(LEngineForce,0,0));
 }
-std::cout<<REngineForce<<"\n";
+//std::cout<<REngineForce<<"\n";
 
 
 }
@@ -483,15 +510,43 @@ void tank::fire(btDiscreteDynamicsWorld *World,irr::scene::ISceneManager *scene)
 core::vector3df pos; core::vector3df rot;
 rot = TankNode[RIGIDS_CANNON]->getAbsoluteTransformation().getRotationDegrees();
 pos = TankNode[RIGIDS_CANNON]->getAbsolutePosition();
-std::cout<<"rot "<< rot.X<<"rot "<< rot.Y<<"rot "<< rot.Z<<".\n";
-std::cout<<"pos "<< pos.X<<"pos "<< pos.Y<<"pos "<< pos.Z<<".\n";
+//std::cout<<"rot "<< rot.X<<"rot "<< rot.Y<<"rot "<< rot.Z<<".\n";
+//std::cout<<"pos "<< pos.X<<"pos "<< pos.Y<<"pos "<< pos.Z<<".\n";
 rot = rot.rotationToDirection(core::vector3df(0,2,0));
-std::cout<<"rot "<< rot.X<<"rot "<< rot.Y<<"rot "<< rot.Z<<".\n";
+//std::cout<<"rot "<< rot.X<<"rot "<< rot.Y<<"rot "<< rot.Z<<".\n";
 
 pos = pos + rot;
 new Shell(World,scene,btVector3(pos.X,pos.Y,pos.Z),btVector3(rot.X,rot.Y,rot.Z),SHELL_TYPE_AP);
-std::cout<<"pos "<< pos.X<<"pos "<< pos.Y<<"pos "<< pos.Z<<".\n";
+//std::cout<<"pos "<< pos.X<<"pos "<< pos.Y<<"pos "<< pos.Z<<".\n";
 
 }
 
+void tank::setPosition(irr::core::vector3df pos)
+{
+}
+void tank::setRotation(irr::core::vector3df rot)
+{
+}
 
+void tank::setWF()
+{
+this->TankNode[RIGIDS_HULL]->setMaterialFlag(video::EMF_WIREFRAME,true);
+this->TankNode[RIGIDS_DOME]->setMaterialFlag(video::EMF_WIREFRAME,true);
+this->TankNode[RIGIDS_CANNON]->setMaterialFlag(video::EMF_WIREFRAME,true);
+for (int i = 0;i< WHEELS_COUNT;i++)
+{
+this->WheelsNode_L[i]->setMaterialFlag(video::EMF_WIREFRAME,true);
+this->WheelsNode_R[i]->setMaterialFlag(video::EMF_WIREFRAME,true);
+}
+}
+void tank::setLig()
+{
+this->TankNode[RIGIDS_HULL]->setMaterialFlag(video::EMF_LIGHTING,false);
+this->TankNode[RIGIDS_DOME]->setMaterialFlag(video::EMF_LIGHTING,false);
+this->TankNode[RIGIDS_CANNON]->setMaterialFlag(video::EMF_LIGHTING,false);
+for (int i = 0;i< WHEELS_COUNT;i++)
+{
+this->WheelsNode_L[i]->setMaterialFlag(video::EMF_LIGHTING,false);
+this->WheelsNode_R[i]->setMaterialFlag(video::EMF_LIGHTING,false);
+}
+}

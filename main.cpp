@@ -8,7 +8,7 @@
 #include <BulletCollision/Gimpact/btGImpactShape.h>
 #include <wchar.h>
 #include "enums.h"
-#include"tank.h"
+#include "tank.h"
 #include "motionstate.h"
 #include "funcs.h"
     using namespace std;
@@ -118,65 +118,18 @@ static void UpdatePhysics(u32 TDeltaTime);
 static void UpdateRender(btRigidBody *TObject);
 static void ClearObjects();
 
-void QuaternionToEuler(const btQuaternion &TQuat, btVector3 &TEuler) {
-	btScalar W = TQuat.getW();
-	btScalar X = TQuat.getX();
-	btScalar Y = TQuat.getY();
-	btScalar Z = TQuat.getZ();
-	float WSquared = W * W;
-	float XSquared = X * X;
-	float YSquared = Y * Y;
-	float ZSquared = Z * Z;
 
-	TEuler.setX(atan2f(2.0f * (Y * Z + X * W), -XSquared - YSquared + ZSquared + WSquared));
-	TEuler.setY(asinf(-2.0f * (X * Z - Y * W)));
-	TEuler.setZ(atan2f(2.0f * (X * Y + Z * W), XSquared - YSquared - ZSquared + WSquared));
-	TEuler *= core::RADTODEG;
-}
 
 
 void UpdatePhysics(u32 TDeltaTime) {
 
-	World->stepSimulation(TDeltaTime, 7);
+	World->stepSimulation(TDeltaTime,3);
 
-	btRigidBody *TObject;
-	// Relay the object's orientation to irrlicht
-//	for(core::list<btRigidBody *>::Iterator it = Objects.begin(); it != Objects.end(); ++it) {
-//
-//		//UpdateRender(*Iterator);
-//		scene::ISceneNode *Node = static_cast<scene::ISceneNode *>((*it)->getUserPointer());
-//		TObject = *it;
-//
-//		// Set position
-//		btVector3 Point = TObject->getCenterOfMassPosition();
-//		Node->setPosition(core::vector3df((f32)Point[0], (f32)Point[1], (f32)Point[2]));
-//
-//		// Set rotation
-//		btVector3 EulerRotation;
-//		QuaternionToEuler(TObject->getOrientation(), EulerRotation);
-//		Node->setRotation(core::vector3df(EulerRotation[0], EulerRotation[1], EulerRotation[2]));
-//		//Player->DomeCamera->setTarget(Player->CamHelpT->getAbsolutePosition());
-//		//std::cout << Node->getID() <<".\n";
-//		if (Node->getName() == "Active")
-//		{
-//
-//		std::cout << "update target" <<".\n";
-//
-//		}
-		/*
-		core::list<ISceneNode*>::Iterator itt = Children.begin();
-            while(itt != Children.end())
-            {
-                if((*itt)) return (*itt);
 
-                ++itt;
-            }
-*/
-	//}
 }
 
 
-
+/*
 void UpdateRender(btRigidBody *TObject)
  {
 	ISceneNode *Node = static_cast<ISceneNode *>(TObject->getUserPointer());
@@ -193,6 +146,7 @@ void UpdateRender(btRigidBody *TObject)
 	Euler *= RADTODEG;
 	Node->setRotation(Euler);
 }
+*/
 //bool makeVehlice(tank Tank,btScalar Tmass)
 //{
 //
@@ -650,6 +604,10 @@ bool havemesh = false;
 }
 
 }
+btVector3 aabbmin,aabbmax;
+aabbmin = btVector3(-100,-100,-100);
+aabbmax =btVector3(100,100,100);
+btmesh->calculateAabbBruteForce(aabbmin,aabbmax);
 return btmesh;
 }
 btRigidBody * makeBulletMeshFromIrrlichtNode( const irr::scene::ISceneNode * node,const btScalar TMass)
@@ -989,7 +947,7 @@ int main(int argc, char** argv)
 	irrDriver = irrDevice->getVideoDriver();
 	irrFile = irrDevice->getFileSystem();
 
-	irrDevice->getCursorControl()->setVisible(1);
+	irrDevice->getCursorControl()->setVisible(0);
 
 	// Initialize bullet
 	btDefaultCollisionConfiguration *CollisionConfiguration = new btDefaultCollisionConfiguration();
@@ -1005,8 +963,8 @@ int main(int argc, char** argv)
      // Bullet physics world
  //   World->setDebugDrawer(&mBulletDebug);
 
-    Dummy = new tank(World,irrScene,irr::core::vector3df(0.f,40.f,0.f),50);
-	Player = tank(World,irrScene,irr::core::vector3df(20.,20.,10.),200);
+    Dummy = new tank(OBJ_typ_tank,World,irrScene,irr::core::vector3df(0.f,40.f,0.f),50);
+	Player = tank(OBJ_typ_tank,World,irrScene,irr::core::vector3df(20.,20.,10.),200);
 
 
     scene::IMeshSceneNode* terrain = irrScene->addMeshSceneNode(
@@ -1038,10 +996,10 @@ int main(int argc, char** argv)
 //
 
    terrain->setMaterialFlag(irr::video::EMF_WIREFRAME,true);
-   terrain->setMaterialFlag(irr::video::EMF_LIGHTING,true);
+   terrain->setMaterialFlag(irr::video::EMF_LIGHTING,false);
    terrain->setVisible(draw_irr);
    makeBulletMeshFromIrrlichtNode(terrain,0);
-
+  // terrain->setMaterialFlag(irr::video::EMF_WIREFRAME,true);
    //CreateBox(terrain,terrain->getScale(),0);
    std::cout << "create box " <<".\n";
   // makeBulletMeshFromIrrlichtNode(Dummy->node,200);
@@ -1066,7 +1024,7 @@ irr::gui::IGUIStaticText *fps = irrGUI->addStaticText(L"fps deltatime", rect<s32
 
         m_BulletDebug.setDebugMode(
         // btIDebugDraw::DBG_DrawWireframe |
-        // btIDebugDraw::DBG_DrawAabb |
+        btIDebugDraw::DBG_DrawAabb |
          btIDebugDraw::DBG_DrawContactPoints |
          //btIDebugDraw::DBG_DrawText |
          btIDebugDraw::DBG_DrawConstraintLimits |
@@ -1519,23 +1477,16 @@ void ClearObjects() {
 
 
 				case KEY_KEY_O:
-					Player.TankNode[RIGIDS_HULL]->setVisible(true);
-                    Player.TankNode[RIGIDS_DOME]->setVisible(true);
+					Player.setLig();
+                    Dummy->setLig();
 					//Dummy->node->setVisible(true);
-					draw_irr = true;
+
 				//m_BulletDebug.setDebugMode(0);
 				break;
 				case KEY_KEY_P:
-				Player.TankNode[RIGIDS_HULL]->setVisible(false);
-				Player.TankNode[RIGIDS_DOME]->setVisible(false);
-				//Dummy->node->setVisible(false);
-				draw_irr = false;
-				//m_BulletDebug.setDebugMode(1);
+				Player.setWF();
+				Dummy->setWF();
 
-
-				//Player->node->setPosition(Player->Camera->getAbsolutePosition());
-
-					//CreateStartScene();
 				break;
 				case KEY_KEY_C:
 				//Player->node->setVisible(false);
